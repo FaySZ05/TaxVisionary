@@ -1,0 +1,26 @@
+name: "Group 8"
+output_dir: "html"
+
+navbar:
+  title: "Tax Visionary"
+  href: ./index.html
+  type: inverse
+  left:
+    - text: "Tax Data"
+      icon: fa-line-chart
+      href: ./TaxData.html
+    - text: "Forecast"
+      icon: fa-area-chart
+      href: ./TaxFrc.html
+  right:
+    - text: "Instagram"
+      icon: fa-instagram
+      href: https://www.instagram.com/gitauliand/
+  bottom:
+    - title: My Document
+      href: ./footer.html
+
+output:
+  html_document:
+    theme: cosmo
+    css: src/style.css
