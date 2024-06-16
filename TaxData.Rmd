@@ -1,0 +1,117 @@
+---
+title: "Tax Data"
+output: flexdashboard::flex_dashboard
+---
+```{r, include=FALSE}
+library(flexdashboard)
+library(readr)
+tax_revenue <- read.csv("~/Documents/UGM Year 1 Semester 2/R Progamming/Laporan Pajak Indonesia 10 tahun.csv", stringsAsFactors = FALSE)
+```
+
+### Total Tax Revenue in Indonesia 2014-2023 --- Graph A
+```{r, echo=FALSE}
+library(ggplot2)
+df <- data.frame(
+  Year = 2014:2023,
+  Total_Tax_Revenue = c(1146.9, 1240.4, 1285, 1435, 1518.8, 1546.1, 1404.1, 1473.6, 2034.5, 1869)
+)
+ggplot(df, aes(x = Year, y = Total_Tax_Revenue)) +
+  geom_bar(stat = "identity", fill = "#0072B2", color = "black") +
+  labs(title = "Total Tax Revenue in Indonesia (2014-2023)",
+       x = "Year",
+       y = "Tax Revenue (Rp Trillion)") +
+theme_bw()
+```
+
+<h4><b>Graph A shows Total Tax Revenue in Indonesia from 2014-2023.</b></h4>
+Based on the analysis of the bar graph showing the Total Tax Revenue in Indonesia from 2014 to 2023, it is evident that there has been a consistent growth in tax revenue over the years. This upward trend indicates a positive trajectory for the country's financial stability and economic development.
+
+<hr>
+### Migas & Non Migas Tax Revenue in Numbers --- Graph B
+```{r, echo=FALSE}
+tax_revenue_comparison <- data.frame(
+  Year = 2014:2023,
+  Non_Migas_Tax_Revenue = c(897.7, 1011.2, 1069.9, 1100.7, 1248.6, 1273.3, 1166.8, 1227.3, 1560.7, 1800.45),
+  Customs_and_Excise_Revenue = c(161.7, 179.6, 179.0, 192.5, 205.5, 213.4, 205.5, 213.2, 317.7, 300.1), 
+  Migas_Tax_Revenue = c(87.4, 49.7, 36.1, 50.3, 64.7, 39.1, 31.8, 33.1, 75.4, 68.79)
+)
+ggplot(tax_revenue_comparison, aes(x = Year)) +
+  geom_line(aes(y = Non_Migas_Tax_Revenue, color = "Non-Migas Tax Revenue"), linewidth = 1) +
+  geom_line(aes(y = Migas_Tax_Revenue, color = "Migas Tax Revenue"), linewidth = 1) +
+  labs(title = "Migas & Non-Migas Tax Revenue in Numbers (2014-2023)",
+       x = "Year",
+       y = "Tax Revenue (Rp Trillion)") +
+  scale_color_manual(values = c("#0072B2", "#D55E00")) +
+  theme_bw()
+```
+
+<h4><b> Graph B shows Migas & Non-Migas Tax Revenue in Indonesia from 2014-2023.</b></h4>
+Based on the analysis of the line chart depicting Migas & Non-Migas Tax Revenue in Indonesia from 2014 to 2023, there are distinct trends and observations that can guide decision-making and provide insights into future prospects.
+
+1. **Migas Tax Revenue**: The blue line representing Migas Tax Revenue shows a relatively flat and low trend over the years. This indicates that there has been minimal growth or fluctuation in Migas-related tax revenue during the period under consideration. Stakeholders in the oil and gas sector may need to assess the reasons behind this stagnation and explore strategies to enhance revenue generation in this area.
+
+2. **Non-Migas Tax Revenue**: In contrast, the orange line representing Non-Migas Tax Revenue demonstrates a significant upward trend, especially noticeable after the year 2020. This suggests a substantial increase in tax revenue from non-oil and gas sources, indicating diversification and growth in other sectors of the economy. Decision-makers can leverage this information to focus on sectors contributing to non-migas revenue for future planning and investment.
+
+3. **Future Prospects**: Looking ahead, the data implies potential opportunities for revenue growth and economic development in non-migas sectors. Decision-makers can capitalize on the increasing trend in non-migas tax revenue by directing resources and investments towards these sectors. Understanding the differences in revenue trends between Migas and Non-Migas can help in strategic planning and resource allocation to maximize returns and contribute to overall economic prosperity.
+
+<hr>
+### Comparison of 3 Different Sources of Tax Revenue --- Graph C
+```{r, echo=FALSE}
+tax_revenue_comparison <- data.frame(
+  Year = 2014:2023,
+  Non_Migas_Tax_Revenue = c(897.7, 1011.2, 1069.9, 1100.7, 1248.6, 1273.3, 1166.8, 1227.3, 1560.7, 1800.45),
+  Customs_and_Excise_Revenue = c(161.7, 179.6, 179.0, 192.5, 205.5, 213.4, 205.5, 213.2, 317.7, 300.1), 
+  Migas_Tax_Revenue = c(87.4, 49.7, 36.1, 50.3, 64.7, 39.1, 31.8, 33.1, 75.4, 68.79)
+)
+ggplot(tax_revenue_comparison, aes(x = Year)) +
+  geom_line(aes(y = Non_Migas_Tax_Revenue, color = "Non-Migas Tax Revenue"), linewidth = 1) +
+  geom_line(aes(y = Migas_Tax_Revenue, color = "Migas Tax Revenue"), linewidth = 1) +
+  geom_line(aes(y = Customs_and_Excise_Revenue, color = "Customs and Excise Revenue"), linewidth = 1) +
+  labs(title = "Contribution of 3 Main Sources of Tax Revenue in Indonesia (2014-2023)",
+       x = "Year",
+       y = "Tax Revenue (Rp Trillion)") +
+  scale_color_manual(values = c("#0072B2", "#D55E00", "#AE4371")) +
+  theme_bw()
+```
+
+<h4><b> Graph C shows 3 Main Sources of Tax Revenue in Indonesia from 2014-2023.</b></h4>
+Based on the analysis of the bar graph comparing the three main sources of tax revenue in Indonesia from 2014 to 2023, here are some insights and future prospects for decision-making:
+
+1. **Customs and Excise Revenue**: This source of tax revenue has shown minimal growth over the years, remaining relatively flat. Decision-makers should consider exploring strategies to potentially increase revenue from customs and excise to contribute more significantly to the overall tax revenue.
+
+2. **Migas Tax Revenue**: The Migas tax revenue has also remained relatively stable, with a slight increase observed around 2021. To enhance this revenue source, stakeholders may need to evaluate the factors influencing Migas tax collection and identify opportunities for growth.
+
+3. **Non-Migas Tax Revenue**: The Non-Migas tax revenue has experienced substantial growth over the years, showing a significant increase and reaching approximately 1500 RP Trillion by 2023. Decision-makers should focus on sustaining and further expanding this revenue stream through effective tax policies and compliance measures.
+
+Future prospects for decision-making could involve diversifying revenue sources, optimizing tax collection processes, enhancing compliance mechanisms, and implementing targeted policies to support the growth of tax revenue in Indonesia. By leveraging the insights from this analysis, policymakers and stakeholders can make informed decisions to drive sustainable economic development and fiscal stability.
+
+<hr>
+### Growth Rate of Total Tax Revenue --- Graph D
+```{r, echo=FALSE}
+df <- data.frame(
+  Year = 2014:2023,
+  Total_Tax_Revenue_Growth = c(7.0, 8.2, 3.6, 4.6, 13.0, 13.2, 10.8, 13.29, 31.4, 8.8)
+)
+ggplot(df, aes(x = Year, y = Total_Tax_Revenue_Growth)) +
+  geom_line(stat = "identity", color = "#AA4371") +
+  labs(title = "Growth Rate of Total Tax Revenue (%)", x = "Year", y = "Growth Rate (%)") + 
+  theme_bw()
+```
+
+<h4><b> Graph D shows Growth Rate of Total Tax Revenue in Indonesia from 2014-2023.</b></h4>
+Based on the analysis of the bar graph showing the Growth Rate of Total Tax Revenue (%) from 2014 to 2023, here are insights and future prospects for decision-making:
+
+1. **Fluctuating Growth Rates**: The graph illustrates significant fluctuations in the growth rate of total tax revenue over the years. Decision-makers should investigate the factors influencing these fluctuations, such as changes in economic conditions, tax policies, compliance levels, and external factors impacting revenue collection.
+
+2. **Steady Growth vs. Sharp Spikes**: While there are periods of steady growth, such as in 2017 and 2019, there are also instances of sharp spikes and drops in the growth rate, notably in 2020 and 2021. Understanding the reasons behind these sudden changes can help in developing strategies to maintain consistent growth and mitigate risks.
+
+3. **Opportunities for Improvement**: The graph highlights the potential for substantial growth in tax revenue, as seen in the significant spike in 2022. Decision-makers can capitalize on this momentum by identifying and leveraging opportunities to enhance revenue collection, streamline tax processes, and implement targeted initiatives to sustain growth.
+
+4. **Risk Management**: Given the volatility in the growth rate of total tax revenue, it is essential for decision-makers to prioritize risk management strategies. This includes diversifying revenue sources, enhancing data analytics for forecasting, and establishing contingency plans to mitigate the impact of unforeseen events on tax revenue.
+
+5. **Data-Driven Decision-Making**: To make informed decisions, stakeholders should focus on data-driven approaches, utilizing insights from the growth rate trends to inform policy formulation, resource allocation, and revenue optimization strategies.
+
+By leveraging the insights from this analysis and adopting a proactive and strategic approach to decision-making, stakeholders can navigate the complexities of tax revenue management effectively and drive sustainable growth in revenue collection over the coming years.
+
+<br><br>
+<p>Copyright &copy; 2024 TaxVisionary, Inc. All rights reserved.</p>
