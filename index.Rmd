@@ -1,0 +1,107 @@
+---
+title: "Tax Visionary"
+output: html_document
+---
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  #tax-visionary {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    margin-top: 20px;
+  }
+  ul.benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.benefits li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  ul.benefits li:before {
+    margin-right: 10px;
+    color: #666;
+    vertical-align: middle;
+  }
+  ul.contributors {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.contributors li {
+    margin-bottom: 10px;
+  }
+  ul.contributors li:before {
+    margin-right: 10px;
+    color: #666;
+    vertical-align: middle;
+  }
+</style>
+
+About: 
+[Tax Visionary](#tax-visionary)
+
+<div id="tax-visionary">
+  <p><b>Tax Visionary</b> is a platform that provides insights and forecasts for tax revenue. It uses advanced statistical models, such as ARIMA, to analyze historical data and generate accurate predictions for future tax revenue. By providing actionable insights and forecasts, Tax Visionary empowers governments, financial institutions, and everyday individuals to make informed decisions about tax policies and investments, ultimately fostering a more transparent and efficient tax system.
+</p>
+
+  <h2>Benefits</h2>
+<ul class="benefits">
+  <li>
+    <h3><i class="fas fa-circle-check" style="color: #34C759"></i> <i>Accurate Predictions</i></h3> Precise forecasts for future tax revenue.
+  </li>
+  <li>
+    <h3><i class="fas fa-circle-check" style="color: #34C759;"></i> <i>Enhanced Decision-Making</i></h3> Data-driven decisions for investments and budgeting.
+  </li>
+  <li>
+    <h3><i class="fas fa-circle-check" style="color: #34C759;"></i> <i>Improved Budgeting</i></h3> Clear understanding of future tax revenue for effective budgeting.
+  </li>
+  <li>
+    <h3><i class="fas fa-circle-check" style="color: #34C759;"></i> <i>Risk Management</i></h3> Proactive management of tax risks and opportunities.
+  </li>
+  <li>
+    <h3><i class="fas fa-circle-check" style="color: #34C759;"></i> <i>Increased Transparency</i></h3> Clear and transparent view of tax revenue trends.
+  </li>
+</ul>
+
+  
+
+  <br><br>
+
+<style>
+ .contributors li {
+    list-style: none; /* remove default bullet points */
+    margin-bottom: 10px;
+  }
+ .contributors li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+</style>
+
+<h2>Contributors</h2>
+<ul class="contributors">
+  <li>Fayola Saphira Zulkarnaen (23/517214/EK/24518)</li>
+  <li>Alehandro Pedro Dawir (23/523221/EK/24758)</li>
+  <li>Gita Aulia Ananda (23/519713/EK/24599)</li>
+  <li>Jahraa Anggi Muthii Nasywaa Wilhem (23/520455/EK/24655)</li>
+  <li>Nabila Romanova (23/519918/EK/24616)</li>
+  <li>Najla Widona Bima (23/516093/EK/24407)</li>
+  <li>Najwa Nurhaliza (23/520996/EK/24684)</li>
+</ul>
+</div>
+
+<p>Copyright &copy; 2024 TaxVisionary, Inc. All rights reserved.</p>
