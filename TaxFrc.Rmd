@@ -1,0 +1,190 @@
+---
+title: "Tax Forecast"
+---
+### | Total Tax Revenue Forecast
+```{r, echo=FALSE, results='show'}
+suppressPackageStartupMessages(library(forecast))
+
+# Define the data frame df
+df <- data.frame(
+  Year = 2014:2023,
+  Total_Tax_Revenue = c(1146.9, 1240.4, 1285, 1435, 1518.8, 1546.1, 1404.1, 1473.6, 2034.5, 1869)
+)
+
+# Create a time series object for total tax revenue
+ts_total_tax_revenue <- ts(df$Total_Tax_Revenue, start = 2014, frequency = 1)
+
+# Fit an ARIMA (2,1,2) model to the total tax revenue data
+arima_model <- Arima(ts_total_tax_revenue, order = c(2,1,2))
+
+# Generate a forecast for the next 10 years
+forecast_total_tax_revenue <- forecast(arima_model, h = 10)
+
+# Print the forecast results
+print(forecast_total_tax_revenue)
+
+# Plot the forecast
+plot(forecast_total_tax_revenue)
+
+knitr::kable(forecast_total_tax_revenue, caption = "Total Tax Revenue Forecast")
+```
+<h4><b>Key Insights</b></h4>
+Based on the analysis of the bar graph forecast from ARIMA(2,1,2) for the years 2024-2033, here are suggested steps that companies, institutions, or individuals can take for better decision-making:
+
+1. **Understand the Forecasted Trends**: Companies, institutions, and individuals should carefully analyze the forecasted trends depicted in the graph. By understanding the projected values and the associated confidence intervals, stakeholders can anticipate potential future scenarios and make informed decisions.
+
+2. **Evaluate Risk and Uncertainty**: Given the varying levels of uncertainty indicated by the shaded areas around the forecasted line, it is crucial to assess the risks associated with the predictions. Decision-makers should consider the potential impact of uncertain factors on the forecasted values and develop risk mitigation strategies accordingly.
+
+3. **Scenario Planning**: Engage in scenario planning exercises to explore different possible outcomes based on the forecasted values. By considering multiple scenarios and their implications, organizations can prepare for various future situations and adapt their strategies accordingly.
+
+4. **Strategic Decision-Making**: Use the forecasted data as a basis for strategic decision-making. Companies can align their business plans, investment strategies, and resource allocation decisions with the anticipated trends to capitalize on opportunities and mitigate risks.
+
+5. **Continuous Monitoring and Adjustment**: Regularly monitor actual performance against the forecasted values and be prepared to adjust strategies as needed. Continuous evaluation and adaptation based on real-time data can help organizations stay agile and responsive to changing market conditions.
+
+6. **Invest in Data Analytics**: Enhance data analytics capabilities to improve forecasting accuracy and reliability. By leveraging advanced analytics tools and techniques, companies can generate more precise forecasts and gain deeper insights into future trends.
+
+7. **Collaboration and Communication**: Foster collaboration and communication among stakeholders to ensure alignment on decision-making based on the forecasted values. Transparent communication of forecasted data and assumptions can facilitate consensus-building and collective action.
+
+<hr>
+### | Migas Tax Revenue Forecast
+```{r, echo=FALSE, results='show'}
+suppressPackageStartupMessages(library(forecast))
+
+# Define the data frame df
+df <- data.frame(
+  Year = 2014:2023,
+  Migas_Tax_Revenue = c(87.4, 49.7, 36.1, 50.3, 64.7, 39.1, 31.8, 33.1, 75.4, 68.79)
+)
+
+# Create a time series object for Migas tax revenue
+ts_migas_tax_revenue <- ts(df$Migas_Tax_Revenue, start = 2014, frequency = 1)
+
+# Fit an ARIMA (2,1,2) model to the Migas tax revenue data
+arima_model <- Arima(ts_migas_tax_revenue, order = c(2,1,2))
+
+# Generate a forecast for the next 10 years
+forecast_migas_tax_revenue <- forecast(arima_model, h = 10)
+
+# Print the forecast results
+print(forecast_migas_tax_revenue)
+
+# Plot the forecast
+plot(forecast_migas_tax_revenue)
+
+knitr::kable(forecast_migas_tax_revenue, caption = "Migas Tax Revenue Forecast")
+```
+<h4><b>Key Insights</b></h4>
+Based on the analysis of the bar graph forecast from ARIMA(2,1,2) for the years 2024-2033, here are suggested steps that companies, institutions, or individuals can take for better decision-making:
+
+1. **Interpret Forecasted Trends**: Analyze the forecasted values beyond 2020 to understand the projected trends in the data. Identify any patterns or shifts in the values to anticipate future developments.
+
+2. **Evaluate Confidence Intervals**: Consider the shaded blue area around the forecasted line, which represents the confidence intervals. Assess the level of uncertainty associated with the predictions and factor this into decision-making processes.
+
+3. **Risk Assessment and Mitigation**: Evaluate the risks associated with the forecasted values and develop mitigation strategies to address potential challenges. Identify key risk factors that could impact the accuracy of the forecasts.
+
+4. **Strategic Planning**: Utilize the forecasted data as a basis for strategic planning and decision-making. Align business strategies, resource allocation, and investment decisions with the anticipated trends to optimize outcomes.
+
+5. **Scenario Analysis**: Conduct scenario analysis to explore different possible outcomes based on the forecasted values. Develop contingency plans for various scenarios to enhance preparedness and resilience.
+
+6. **Data-Driven Decision-Making**: Emphasize data-driven decision-making by leveraging advanced analytics tools and techniques to enhance forecasting accuracy. Invest in data analytics capabilities to improve the reliability of future predictions.
+
+7. **Stakeholder Engagement**: Engage stakeholders in discussions about the forecasted trends and involve them in decision-making processes. Foster collaboration and communication to ensure alignment and consensus on strategic actions.
+
+8. **Continuous Monitoring and Adjustment**: Continuously monitor actual performance against the forecasted values and be prepared to adjust strategies in response to changing conditions. Stay agile and adaptive to navigate uncertainties effectively.
+
+<hr>
+### | Non-Migas Tax Revenue Forecast
+```{r, echo=FALSE, results='show'}
+suppressPackageStartupMessages(library(forecast))
+
+# Define the data frame df
+df <- data.frame(
+  Year = 2014:2023,
+  Non_Migas_Tax_Revenue = c(897.7, 1011.2, 1069.9, 1100.7, 1248.6, 1273.3, 1166.8, 1227.3, 1560.7, 1800.45)
+)
+
+# Create a time series object for Non-Migas tax revenue
+ts_non_migas_tax_revenue <- ts(df$Non_Migas_Tax_Revenue, start = 2014, frequency = 1)
+
+# Fit an ARIMA (2,1,2) model to the Non-Migas tax revenue data
+arima_model <- Arima(ts_non_migas_tax_revenue, order = c(2,1,2))
+
+# Generate a forecast for the next 10 years
+forecast_non_migas_tax_revenue <- forecast(arima_model, h = 10)
+
+# Print the forecast results
+print(forecast_non_migas_tax_revenue)
+
+# Plot the forecast
+plot(forecast_non_migas_tax_revenue)
+
+knitr::kable(forecast_non_migas_tax_revenue, caption = "Non-Migas Tax Revenue Forecast")
+```
+<h4><b>Key Insights</b></h4>
+Based on the analysis of the bar graph forecast from ARIMA(2,1,2) for the years 2024-2033, here are suggested steps that companies, institutions, or individuals can take for better decision-making:
+
+1. **Evaluate Historical Trends**: Analyze the historical data points leading up to 2020 to understand past trends and patterns. Identify any key factors that influenced the data and assess their impact on the forecast.
+
+2. **Understand Forecasted Stability**: Note the flat forecasted trend from 2020 to 2030 and the increasing uncertainty represented by the shaded area. Consider the implications of a stable forecast and plan accordingly for potential changes.
+
+3. **Risk Management**: Assess the increasing uncertainty in the forecast and develop risk management strategies to mitigate the impact of unexpected events or fluctuations. Identify potential risks that could affect the forecasted values.
+
+4. **Resource Allocation**: Use the forecasted values as a guide for resource allocation and investment decisions. Allocate resources based on the anticipated trends to optimize performance and achieve strategic objectives.
+
+5. **Scenario Planning**: Conduct scenario planning exercises to explore different outcomes based on the forecasted values. Develop contingency plans for various scenarios to enhance preparedness and flexibility.
+
+6. **Communication and Collaboration**: Foster open communication and collaboration within the organization or institution to ensure alignment on decision-making processes. Engage stakeholders in discussions about the forecasted trends and solicit input for informed decisions.
+
+7. **Continuous Monitoring**: Continuously monitor the actual performance against the forecasted values and adjust strategies as needed. Stay vigilant to changes in the external environment and be prepared to adapt to evolving circumstances.
+
+8. **Data-Driven Decision-Making**: Emphasize data-driven decision-making by leveraging advanced analytics tools and techniques to enhance forecasting accuracy. Invest in data analytics capabilities to improve the reliability of future predictions.
+
+<hr>
+### | Customs and Excise Revenue Forecast
+```{r, echo=FALSE, results='show'}
+suppressPackageStartupMessages(library(forecast))
+
+# Define the data frame df
+df <- data.frame(
+  Year = 2014:2023,
+  Customs_and_Excise_Revenue = c(161.7, 179.6, 179.0, 192.5, 205.5, 213.4, 205.5, 213.2, 317.7, 300.1)
+)
+
+# Create a time series object for Customs and Excise revenue
+ts_customs_and_excise_revenue <- ts(df$Customs_and_Excise_Revenue, start = 2014, frequency = 1)
+
+# Fit a SARIMA model to the Customs and Excise revenue data
+sarima_model <- Arima(ts_customs_and_excise_revenue, order = c(2,1,2), seasonal = list(order = c(1,1,1), period = 1))
+
+# Generate a forecast for the next 10 years
+forecast_customs_and_excise_revenue <- forecast(sarima_model, h = 10)
+
+# Print the forecast results
+print(forecast_customs_and_excise_revenue)
+
+# Plot the forecast
+plot(forecast_customs_and_excise_revenue)
+
+knitr::kable(forecast_customs_and_excise_revenue, caption = "Customs and Excise Revenue Forecast")
+```
+<h4><b>Key Insights</b></h4>
+Based on the analysis of the bar graph forecast from ARIMA(2,1,2) for the years 2024-2033, here are suggested steps that companies, institutions, or individuals can take for better decision-making:
+
+1. **Historical Data Review**: Analyze the historical data up to 2020 to identify trends and patterns that can provide insights into future forecasts.
+
+2. **Forecast Understanding**: Understand the forecasted values from 2020 to 2030 and the associated confidence interval. Recognize the increasing uncertainty in the forecast as time progresses.
+
+3. **Risk Assessment**: Evaluate the potential risks associated with the forecasted values and develop risk mitigation strategies to address uncertainties.
+
+4. **Resource Planning**: Utilize the forecasted values to allocate resources effectively and make informed decisions about investments and operational strategies.
+
+5. **Scenario Analysis**: Conduct scenario analysis based on different outcomes of the forecast to prepare for various potential situations and develop contingency plans.
+
+6. **Stakeholder Engagement**: Engage stakeholders in discussions about the forecasted trends and involve them in decision-making processes to ensure alignment and collective understanding.
+
+7. **Monitoring and Adaptation**: Continuously monitor actual performance against the forecasted values and be prepared to adapt strategies based on changing circumstances.
+
+8. **Data-Driven Decisions**: Emphasize data-driven decision-making by leveraging advanced analytics tools to enhance forecasting accuracy and improve strategic planning.
+
+<br><br>
+<p>Copyright &copy; 2024 TaxVisionary, Inc. All rights reserved.</p>
