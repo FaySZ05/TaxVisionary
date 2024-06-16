@@ -7,7 +7,7 @@ library(shiny)
 library(plotly)
 
 # Read the CSV file
-tax_data <- read_csv("~/Documents/UGM Year 1 Semester 2/R Progamming/Laporan Pajak Indonesia 10 tahun.csv")
+tax_data <- read_csv("~/Documents/UGM Year 1 Semester 2/R Programming/Laporan Pajak Indonesia 10 tahun.csv")
 
 # Remove rows 22 to 50
 tax_data1 <- tax_data[-c(22:50), ]
