@@ -2,12 +2,6 @@
 title: "Tax Data"
 output: flexdashboard::flex_dashboard
 ---
-```{r, include=FALSE}
-library(flexdashboard)
-library(readr)
-tax_revenue <- read.csv("~/Documents/UGM Year 1 Semester 2/R Programming/Laporan Pajak Indonesia 10 tahun.csv", stringsAsFactors = FALSE)
-```
-
 ### Total Tax Revenue in Indonesia 2014-2023 --- Graph A
 ```{r, echo=FALSE}
 library(ggplot2)
