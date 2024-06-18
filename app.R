@@ -22,24 +22,15 @@ tax_revenue_comparison <- data.frame(
   Migas_Tax_Revenue = c(87.4, 49.7, 36.1, 50.3, 64.7, 39.1, 31.8, 33.1, 75.4, 68.79)
 )
 
-browseURL("About.html")
-# Set the input and output file names
-input_file <- "About.rmd"
-output_file <- "About.html"
-
-# Render the RMD file to an HTML file
-rmarkdown::render(input_file, output_file = output_file, output_dir = "output", quiet = FALSE)
-
 # Define UI for application
 ui <- dashboardPage(
-  dashboardHeader(
-  ),
   dashboardSidebar(
     sidebarMenu(
       menuItem("Tax Data", tabName = "tax_data", icon = icon("chart-line")),
       menuItem("Forecast", tabName = "forecast", icon = icon("chart-area"))
     )
-  )
+  ),
+  dashboardBody()
 )
 
 # Run the Shiny app
@@ -47,4 +38,3 @@ server <- function(input, output) {}
 
 # Run the application
 shinyApp(ui = ui, server = server)
-
